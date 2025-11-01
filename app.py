@@ -13,7 +13,7 @@ def predict():
     stock = request.form.get('stock', '').strip().upper()
     days = int(request.form.get('days', 1))
     if days < 1 or days > 7:
-        return render_template('index.html', error='Please enter days between 1 and 7.')
+        return render_template('result.html', error='Please enter days between 1 and 7.')
     if not stock:
         return render_template('index.html', error='Please enter a stock symbol.')
 
